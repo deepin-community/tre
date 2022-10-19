@@ -1,0 +1,141 @@
+tre (0.8.0-6) unstable; urgency=medium
+
+  * Add locales-all to Build-Depends and enable test suite in full.
+    Thanks to Raphaël Hertzog and Antoine Beaupré.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 28 Oct 2016 11:05:18 +0200
+
+tre (0.8.0-5) unstable; urgency=medium
+
+  * Add debian/patches/03-cve-2016-8859 to fix CVE-2016-8859.
+    Patch borrowed from wheezy LTS. Closes: #842169.
+  * Enable test suite without making failures to abort the build.
+    Test "wretest" fails and it needs to be investigated.
+  * Add debian/clean with files that should not be part of source code.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 27 Oct 2016 01:02:00 +0200
+
+tre (0.8.0-4) unstable; urgency=medium
+
+  * I'm having a déjà vu.
+  * Drop debian/patches/99-config-guess-config-sub.
+  * Added debian/patches/99-autoreconf to update libtool stuff.
+    Closes: #699631, #746299 (hopefully).
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 30 Apr 2014 00:35:44 +0200
+
+tre (0.8.0-3) unstable; urgency=low
+
+  * Switch to 3.0 (quilt) source format.
+  * Updated config.guess and config.sub.
+  * Switch to dh.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 03 Jun 2012 17:45:20 +0200
+
+tre (0.8.0-2) unstable; urgency=low
+
+  * Added "Replaces: libtre4" to libtre5, as both library packages have
+    files in /usr/share/locale in common. Closes: #559512.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 05 Dec 2009 12:38:18 +0100
+
+tre (0.8.0-1) unstable; urgency=low
+
+  * New upstream release. Closes: #558465. From the NEWS file: Added
+    tre_ prefix to all functions exported from libtre. This changes the
+    binary interface (ABI). The old source interface (API) is still
+    available in <tre/regex.h>. New programs should use <tre/tre.h>.
+  * Made libtre-dev to depend on exact libtre version (lintian warning).
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 03 Dec 2009 18:27:10 +0100
+
+tre (0.7.6-2) unstable; urgency=low
+
+  * Use STRIP variable on tre-agrep.
+  * Removed useless *.la files.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 30 Aug 2009 20:42:38 +0200
+
+tre (0.7.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * License has changed from LGPL to a 2-clause BSD-style license.
+  * Updated config.guess and config.sub. Closes: #531962.
+  * Added de.po translation. Closes: #529219.
+  * Build-Depends: gettext, because of the above.
+  * Do not ignore errors from make distclean.
+  * Removed redundant section and priority entries from control file.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 28 Jul 2009 20:49:32 +0200
+
+tre (0.7.5-2) unstable; urgency=low
+
+  * Added available translations to libtre4. Closes: #513056.
+  * Added tre.pc to libtre-dev. Closes: #513055.
+  * Some debian/rules cleanup.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 26 Jan 2009 12:29:08 +0100
+
+tre (0.7.5-1) unstable; urgency=low
+
+  * New upstream release. See the NEWS file for details.
+  * Added Milan Zamazal to the Uploaders field, as backup maintainer.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 19 Dec 2006 20:06:52 +0100
+
+tre (0.7.3-1) unstable; urgency=low
+
+  * New upstream release. License is now LGPL.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 11 Apr 2006 19:13:10 +0200
+
+tre (0.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 24 Dec 2004 20:13:14 +0100
+
+tre (0.7.0-1) unstable; urgency=low
+
+  * New upstream release (Closes: #280781).
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 12 Nov 2004 18:33:02 +0100
+
+tre (0.6.8-2) unstable; urgency=low
+
+  * New package tre-agrep, contains /usr/bin/tre-agrep (Closes: #240166).
+  * Added Suggests: tre-agrep to libtre4.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue,  6 Jul 2004 17:37:46 +0200
+
+tre (0.6.8-1) unstable; urgency=low
+
+  * New upstream release, [[:blank:]] should work again (Closes: #250576).
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 28 May 2004 00:29:00 +0200
+
+tre (0.6.7-1) unstable; urgency=low
+
+  * New upstream (stable) release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 23 May 2004 17:09:04 +0200
+
+tre (0.6.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added --enable-static, since the default is no.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 14 Apr 2004 01:01:22 +0200
+
+tre (0.6.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #226128).
+  * Changed control, rules and shlibs to match new soname.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon,  5 Jan 2004 15:41:22 +0100
+
+tre (0.5.3-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 27 Oct 2003 22:56:44 +0100

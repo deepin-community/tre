@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_clean:
+	dh_clean
+	cd po && rm -f *.gmo
+
+override_dh_auto_configure:
+	touch -d "2014-04-29 12:00" `cat debian/modified-files.txt`
+	dh_auto_configure -- --enable-static
+
+override_dh_auto_build:
+	dh_auto_build
+	$(MAKE) -C po update-gmo
+
+override_dh_auto_install:
+	dh_auto_install
+	mv debian/tmp/usr/bin/agrep \
+	   debian/tmp/usr/bin/tre-agrep
+	mv debian/tmp/usr/share/man/man1/agrep.1 \
+	   debian/tmp/usr/share/man/man1/tre-agrep.1
+
+override_dh_installdocs:
+	dh_installdocs --link-doc=libtre5 NEWS README THANKS TODO

@@ -1,0 +1,4 @@
+tests/agrep/basic.in
+tests/agrep/delimiters.in
+tests/agrep/exitstatus.in
+tests/agrep/records.in

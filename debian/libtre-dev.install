@@ -1,0 +1,4 @@
+usr/include
+usr/lib/*/libtre.so
+usr/lib/*/libtre.a
+usr/lib/*/pkgconfig/*

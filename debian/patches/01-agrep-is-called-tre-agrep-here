@@ -1,0 +1,25 @@
+From: Santiago Vila <sanvila@debian.org>
+Subject: agrep is called tre-agrep here
+X-Debian-version: 0.7.6-1
+
+--- a/doc/agrep.1.in
++++ b/doc/agrep.1.in
+@@ -1,14 +1,14 @@
+-.TH agrep 1 "November 21, 2004" "TRE agrep @PACKAGE_VERSION@"
++.TH tre-agrep 1 "November 21, 2004" "TRE agrep @PACKAGE_VERSION@"
+ .SH NAME
+-agrep \- print lines approximately matching a pattern
++tre-agrep \- print lines approximately matching a pattern
+ .SH SYNOPSIS
+-.B agrep
++.B tre-agrep
+ .RI [ OPTION ]...
+ .I PATTERN
+ .RI [ FILE ]...
+ .SH DESCRIPTION
+ Searches for approximate matches of PATTERN in each FILE or standard
+-input.   Example: `agrep \-2 optimize foo.txt' outputs all lines in
++input.   Example: `tre-agrep \-2 optimize foo.txt' outputs all lines in
+ file `foo.txt' that match "optimize" within two errors.  E.g. lines
+ which contain "optimise", "optmise", and "opitmize" all match.
+ .SH OPTIONS

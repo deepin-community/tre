@@ -1,0 +1,10 @@
+#!/bin/sh
+tar xzvf tre_0.8.0.orig.tar.gz
+cp -a tre-0.8.0 tre-0.8.0.original
+cd tre-0.8.0
+autoreconf -v -f -i
+rm -f config.h.in~
+rm -rf autom4te.cache
+cd ..
+diff -ruP tre-0.8.0.original tre-0.8.0 > 99-autoreconf
+grep ^+++ 99-autoreconf | awk '{ print substr($2,11) }' > modified-files.txt
